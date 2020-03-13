@@ -30,7 +30,7 @@ body {
 
   @include p-el("after") {
     @extend%shape;
-    top: $base-unit * 125;
+    top: 61% ;
     right: -$base-unit * 62.5;
     background: $color-primary;
     border-radius: 50% 50% 50% 50% / 70% 60% 50% 40%;

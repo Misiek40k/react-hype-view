@@ -1,0 +1,37 @@
+@import "./mixin.scss";
+
+$color-light: #fff;
+$color-border: #c9cdd7;
+$color-text: #4b597b;
+$color-primary: #a576f4;
+$color-secondary: #7176f7;
+$color-success-light: #8df4a1;
+$color-success-dark: #28e7e7;
+$color-warning-light: #f97298;
+$color-waring-dark: #f34f69;
+
+$font-header: "Montserrat", sans-serif;
+$font-text: "Source Sans Pro", sans-serif;
+
+$base-unit: 1rem * 1.25;
+
+$radius: $base-unit * 0.25;
+$transition: all 0.5s;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+$br-mobile: 360px;
+$br-tablet: 768px;
+$br-desktop: 1200px;
+
+//fadeIn animation
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

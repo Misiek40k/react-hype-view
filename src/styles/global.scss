@@ -8,15 +8,33 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   background: $color-light;
   font-family: $font-text;
   font-size: ($base-unit * 0.8);
   line-height: 1.7;
-  color: $color-dark;
+  color: $color-text;
   letter-spacing: 0.5px;
   overflow-y: scroll;
+
+  @include p-el("before") {
+    @extend%shape;
+    top: $base-unit * 22.5;
+    left: -$base-unit * 35;
+    background: $color-secondary;
+    border-radius: 70% 40% 50% 50% / 60% 60% 50% 50%;
+    transform: rotate(230deg);
+  }
+
+  @include p-el("after") {
+    @extend%shape;
+    top: $base-unit * 125;
+    right: -$base-unit * 62.5;
+    background: $color-primary;
+    border-radius: 50% 50% 50% 50% / 70% 60% 50% 40%;
+  }
 }
 
 a,

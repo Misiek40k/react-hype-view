@@ -4,6 +4,6 @@ export const settings = {
     icon: 'bars',
   },
   header: {
-    title: 'Tablature searcher',
+    title: 'Zadanie rekrutacyjne',
   },
 };

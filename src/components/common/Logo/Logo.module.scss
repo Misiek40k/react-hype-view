@@ -3,7 +3,6 @@
 .component {
   width: $base-unit * 8;
   height: $base-unit * 8;
-  margin: 0 auto;
   background: linear-gradient(-45deg, $color-primary, $color-secondary);
   border-radius: $base-unit * 0.5;
   padding: $base-unit * 1.5;
@@ -18,7 +17,7 @@
     height: 50%;
     align-items: center;
     justify-content: center;
-    font-family: $font-header;
+    font-family: $font-logo;
     font-size: $base-unit * 1.75;
     font-weight: $fw-regular;
   }

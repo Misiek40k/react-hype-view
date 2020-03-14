@@ -1,0 +1,13 @@
+@import "../../../styles//settings.scss";
+
+.header {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+  padding: $base-unit * 2.5 $base-unit * 10;
+  border-radius: $base-unit * 0.75;
+  color: $color-light;
+  font-family: $font-header;
+  font-size: $base-unit * 2;
+  line-height: 1;
+}

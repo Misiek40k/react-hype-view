@@ -37,7 +37,7 @@ $br-desktop: 1200px;
 
 //primary box shadow
 
-%primaryShadow {
+%primary-shadow {
   box-shadow: 0 $base-unit * 0.2 $base-unit * 0.4 0 rgba(165, 118, 244, 0.1),
     0 $base-unit * 0.3 $base-unit 0 rgba(165, 118, 244, 0.1);
 }

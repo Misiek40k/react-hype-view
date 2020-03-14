@@ -4,11 +4,23 @@
   position: relative;
   display: inline-block;
   background: linear-gradient(to bottom, $color-primary, $color-secondary);
+  margin-bottom: $base-unit * 7;
   padding: $base-unit * 2.5 $base-unit * 10;
   border-radius: $base-unit * 0.75;
   color: $color-light;
   font-family: $font-header;
   font-size: $base-unit * 2;
   line-height: 1;
-  @extend%primaryShadow;
+  @extend%primary-shadow;
+
+  @include p-el("before") {
+    left: 50%;
+    bottom: -$base-unit * 10;
+    display: inline-block;
+    background: $color-border;
+    height: $base-unit * 10;
+    width: $base-unit * 0.15;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 }

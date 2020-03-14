@@ -29,8 +29,8 @@ $br-desktop: 1200px;
 
 %shape {
   content: "";
-  width: $base-unit * 90;
-  height: $base-unit * 60;
+  width: 70vw;
+  height: 45vw;
   z-index: -1;
   opacity: 0.15;
 }

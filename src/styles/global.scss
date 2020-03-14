@@ -17,12 +17,12 @@ body {
   line-height: 1.7;
   color: $color-text;
   letter-spacing: 0.5px;
-  overflow-y: scroll;
+  overflow-x: hidden;
 
   @include p-el("before") {
     @extend%shape;
-    top: $base-unit * 22.5;
-    left: -$base-unit * 35;
+    top: $base-unit * 25;
+    left: -22vw;
     background: $color-secondary;
     border-radius: 70% 40% 50% 50% / 60% 60% 50% 50%;
     transform: rotate(230deg);
@@ -30,8 +30,8 @@ body {
 
   @include p-el("after") {
     @extend%shape;
-    top: 61% ;
-    right: -$base-unit * 62.5;
+    top: 85vh ;
+    right: -45vw;
     background: $color-primary;
     border-radius: 50% 50% 50% 50% / 70% 60% 50% 40%;
   }

@@ -1,4 +1,4 @@
-@import "../../../styles//settings.scss";
+@import "../../../styles/settings.scss";
 
 .header {
   position: relative;
@@ -11,6 +11,4 @@
   font-size: $base-unit * 2;
   line-height: 1;
   @extend%primaryShadow;
-
-
 }

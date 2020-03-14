@@ -6,4 +6,7 @@ export const settings = {
   header: {
     title: 'Zadanie rekrutacyjne',
   },
+  content: {
+    title: 'People',
+  },
 };

@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  margin: 0 auto;
+  width: 80%;
+  background: $color-light;
+  max-width: $base-unit * 77;
+  border-radius: $base-unit * 0.5;
+  box-shadow: 0 $base-unit * 0.2 $base-unit * 0.4 0 rgba(165, 118, 244, 0.1),
+    0 $base-unit * 0.3 $base-unit 0 rgba(165, 118, 244, 0.1);
+}

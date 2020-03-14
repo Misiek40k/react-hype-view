@@ -36,6 +36,13 @@ $br-desktop: 1200px;
   opacity: 0.15;
 }
 
+//primary box shadow
+
+%primaryShadow {
+  box-shadow: 0 $base-unit * 0.2 $base-unit * 0.4 0 rgba(165, 118, 244, 0.1),
+    0 $base-unit * 0.3 $base-unit 0 rgba(165, 118, 244, 0.1);
+}
+
 //fadeIn animation
 
 @keyframes fadeIn {

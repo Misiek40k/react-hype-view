@@ -7,7 +7,6 @@
   align-items: center;
 
   @include p-el("before") {
-    content: "";
     left: 10%;
     top: $base-unit * 18;
     display: inline-block;
@@ -20,7 +19,6 @@
   }
 
   @include p-el("after") {
-    content: "";
     right: -$base-unit * 3;
     top: $base-unit * 8;
     width: $base-unit * 7;

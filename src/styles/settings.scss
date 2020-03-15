@@ -26,7 +26,14 @@ $br-mobile: 360px;
 $br-tablet: 768px;
 $br-desktop: 1200px;
 
-//shape
+//fonts
+
+%condition-font {
+  color: $color-border;
+  font-size: $base-unit * 1.5;
+}
+
+//shapes
 
 %shape {
   width: 70vw;
@@ -35,7 +42,13 @@ $br-desktop: 1200px;
   opacity: 0.15;
 }
 
-//primary box shadow
+//gradients
+
+%primary-gradient {
+  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+}
+
+//shadows
 
 %primary-shadow {
   box-shadow: 0 $base-unit * 0.2 $base-unit * 0.4 0 rgba(165, 118, 244, 0.1),

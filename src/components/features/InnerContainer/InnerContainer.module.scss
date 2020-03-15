@@ -1,0 +1,24 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $base-unit * 2.5;
+  height: 100%;
+  width: 60%;
+  border-radius: $base-unit * 0.5;
+  @extend%primary-shadow;
+
+  @include p-el("before") {
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: $base-unit;
+    height: 100%;
+    border-radius: $base-unit * 0.5 0 0 $base-unit * 0.5;
+    z-index: 0;
+    @extend%primary-gradient;
+  }
+}

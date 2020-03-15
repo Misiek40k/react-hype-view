@@ -20,6 +20,16 @@
     }
   }
 
+  &.small {
+    width: $base-unit * 2;
+    height: $base-unit * 2;
+    font-size: $base-unit;
+  }
+
+  &.danger {
+    @extend%danger-gradient;
+  }
+
   &.success {
     @extend%success-gradient;
     @extend%success-shadow;

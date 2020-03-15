@@ -4,13 +4,9 @@
   width: 100%;
   height: $base-unit * 7.5;
   margin-bottom: $base-unit * 3.75;
+  padding-left: $base-unit * 3;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .condition {
-    margin-left: $base-unit * 3;
-    @extend%condition-font;
-  }
 }

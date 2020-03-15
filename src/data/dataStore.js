@@ -23,5 +23,9 @@ export const settings = {
         minus: 'minus',
       },
     },
+    condition: {
+      outer: 'And',
+      inner: 'Or',
+    },
   },
 };

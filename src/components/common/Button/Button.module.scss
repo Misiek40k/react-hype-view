@@ -21,7 +21,7 @@
   }
 
   &.success {
-    background: linear-gradient(to bottom, $color-success-light, $color-success-dark);
+    @extend%success-gradient;
     @extend%success-shadow;
 
     @include p-el("before") {

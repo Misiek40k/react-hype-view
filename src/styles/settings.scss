@@ -48,6 +48,10 @@ $br-desktop: 1200px;
   background: linear-gradient(to bottom, $color-primary, $color-secondary);
 }
 
+%success-gradient {
+  background: linear-gradient(to bottom, $color-success-light, $color-success-dark);
+}
+
 //shadows
 
 %primary-shadow {

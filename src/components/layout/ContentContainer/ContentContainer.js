@@ -18,7 +18,10 @@ const ContentContainer = () => {
       <ul>
         <ContentItem />
       </ul>
-      <Button variant={`${buttons.size.large} ${buttons.variant.success}`} name={buttons.icon.plus} />
+      <Button
+        variant={`${buttons.size.large} ${buttons.variant.success}`}
+        name={buttons.icon.plus}
+      />
     </section>
   );
 };

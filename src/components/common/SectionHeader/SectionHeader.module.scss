@@ -1,26 +1,17 @@
 @import "../../../styles/settings.scss";
 
 .header {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   background: linear-gradient(to bottom, $color-primary, $color-secondary);
   margin-bottom: $base-unit * 7;
   padding: $base-unit * 2.5 $base-unit * 10;
+  width: 40%;
   border-radius: $base-unit * 0.75;
   color: $color-light;
   font-family: $font-header;
   font-size: $base-unit * 2;
   line-height: 1;
+  z-index: 1;
   @extend%primary-shadow;
-
-  @include p-el("before") {
-    left: 50%;
-    bottom: -$base-unit * 10;
-    display: inline-block;
-    background: $color-border;
-    height: $base-unit * 10;
-    width: $base-unit * 0.15;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
 }

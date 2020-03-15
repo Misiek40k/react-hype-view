@@ -8,4 +8,6 @@
   max-width: $base-unit * 77;
   border-radius: $base-unit * 0.5;
   @extend%primary-shadow;
+  display: flex;
+  flex-direction: column;
 }

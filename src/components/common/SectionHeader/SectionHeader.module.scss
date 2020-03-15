@@ -6,12 +6,12 @@
   background: linear-gradient(to bottom, $color-primary, $color-secondary);
   margin-bottom: $base-unit * 7;
   padding: $base-unit * 2.5 $base-unit * 10;
-  width: 40%;
+  width: $base-unit * 10;
   border-radius: $base-unit * 0.75;
   color: $color-light;
   font-family: $font-header;
   font-size: $base-unit * 2;
   line-height: 1;
-  z-index: 1;
+  z-index: 2;
   @extend%primary-shadow;
 }

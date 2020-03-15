@@ -42,6 +42,10 @@ $br-desktop: 1200px;
     0 $base-unit * 0.3 $base-unit 0 rgba(165, 118, 244, 0.1);
 }
 
+%success-shadow {
+  box-shadow: -$base-unit * 0.1 $base-unit * 1.8 $base-unit * 1.8 -$base-unit * 0.25 rgba(40, 231, 231, 0.3);
+}
+
 //fadeIn animation
 
 @keyframes fadeIn {

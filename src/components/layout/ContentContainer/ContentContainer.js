@@ -10,6 +10,7 @@ import styles from './ContentContainer.module.scss';
 
 const ContentContainer = () => {
   const data = settings.content;
+  const buttons = settings.content.buttons;
 
   return (
     <section className={styles.component}>
@@ -17,7 +18,7 @@ const ContentContainer = () => {
       <ul>
         <ContentItem />
       </ul>
-      <Button variant='large success' name='plus' />
+      <Button variant={`${buttons.size.large} ${buttons.variant.success}`} name={buttons.icon.plus} />
     </section>
   );
 };

@@ -8,5 +8,20 @@ export const settings = {
   },
   content: {
     title: 'People',
+    buttons: {
+      size: {
+        large: 'large',
+        medium: 'medium',
+        small: 'small',
+      },
+      variant: {
+        success: 'success',
+        danger: 'danger',
+      },
+      icon: {
+        plus: 'plus',
+        minus: 'minus',
+      },
+    },
   },
 };

@@ -12,7 +12,10 @@ const InnerContainer = props => {
   return (
     <div className={styles.component}>
       <Title subtitle='Age 40+' />
-      <Button variant={`${data.size.small} ${data.variant.danger}`} name={data.icon.minus} />
+      <Button
+        variant={`${data.size.small} ${data.variant.danger}`}
+        name={data.icon.minus}
+      />
     </div>
   );
 };

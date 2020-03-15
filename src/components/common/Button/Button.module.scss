@@ -28,6 +28,7 @@
 
   &.danger {
     @extend%danger-gradient;
+    @extend%danger-shadow;
   }
 
   &.success {

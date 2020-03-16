@@ -11,7 +11,7 @@ const ContentItem = () => {
 
   return (
     <li className={styles.component}>
-      <Condition name={data.condition.outer} />
+      <Condition name={data.condition.txt.outer} variant={data.condition.variant.medium} />
       <InnerContainer />
     </li>
   );

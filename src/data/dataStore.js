@@ -24,8 +24,15 @@ export const settings = {
       },
     },
     condition: {
-      outer: 'And',
-      inner: 'Or',
+      txt:{
+        outer: 'And',
+        inner: 'Or',
+      },
+      variant: {
+        large: 'large',
+        medium: 'medium',
+        small: 'small',
+      },
     },
   },
 };

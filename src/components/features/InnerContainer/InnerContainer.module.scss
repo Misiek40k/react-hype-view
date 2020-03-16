@@ -9,6 +9,7 @@
   height: 100%;
   width: 65%;
   border-radius: $base-unit * 0.5;
+  background: $color-light;
   @extend%primary-shadow;
 
   @include p-el("before") {
@@ -18,7 +19,6 @@
     width: $base-unit;
     height: 100%;
     border-radius: $base-unit * 0.5 0 0 $base-unit * 0.5;
-    z-index: 0;
     @extend%primary-gradient;
   }
 }

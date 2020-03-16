@@ -5,8 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 $base-unit * 2.5;
-  height: 100%;
+  padding: $base-unit * 2 $base-unit * 2.5;
   width: 65%;
   border-radius: $base-unit * 0.5;
   background: $color-light;
@@ -20,5 +19,26 @@
     height: 100%;
     border-radius: $base-unit * 0.5 0 0 $base-unit * 0.5;
     @extend%primary-gradient;
+  }
+
+  .large {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: $base-unit;
+
+    .title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .border {
+        border: $base-unit * 0.15 solid $color-border;
+        border-radius: $base-unit * 0.4;
+        width: 85%;
+        padding-left: $base-unit * 2;
+      }
+    }
   }
 }

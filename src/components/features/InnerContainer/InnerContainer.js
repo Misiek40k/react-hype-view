@@ -12,7 +12,7 @@ const variantTypes = {
   large: InnerContainerLarge,
 };
 
-const InnerContainer = ({ title, variant }) => {
+const InnerContainer = ({ variant, ...otherProps }) => {
   const VariantComponent = variantTypes[variant];
 
   if (!VariantComponent) {
@@ -20,14 +20,13 @@ const InnerContainer = ({ title, variant }) => {
   } else {
     return (
       <div className={styles.component}>
-        <VariantComponent title={title} />
+        <VariantComponent {...otherProps} />
       </div>
     );
   }
 };
 
 InnerContainer.propTypes = {
-  title: PropTypes.string,
   variant: PropTypes.string,
 };
 

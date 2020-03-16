@@ -7,13 +7,13 @@ import Condition from '../../common/Condition/Condition';
 
 import styles from './ContentItem.module.scss';
 
-const ContentItem = ({ variant, title }) => {
+const ContentItem = ({ variant, title, options }) => {
   const data = settings.content;
 
   return (
     <li className={styles.component}>
       <Condition name={data.condition.txt.outer} variant={variant} />
-      <InnerContainer title={title} variant={variant} />
+      <InnerContainer title={title} variant={variant} options={options} />
     </li>
   );
 };
@@ -21,6 +21,7 @@ const ContentItem = ({ variant, title }) => {
 ContentItem.propTypes = {
   variant: PropTypes.string,
   title: PropTypes.string,
+  options: PropTypes.array,
 };
 
 export default ContentItem;

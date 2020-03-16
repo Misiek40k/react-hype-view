@@ -4,11 +4,13 @@ import { settings } from '../../../data/dataStore';
 
 import Title from '../../common/Title/Title';
 import Button from '../../common/Button/Button';
+import ItemOption from '../../common/ItemOption/ItemOption';
 
 import styles from './InnerContainer.module.scss';
 
-const InnerContainerLarge = ({ title }) => {
+const InnerContainerLarge = ({ title, options }) => {
   const data = settings.content.buttons;
+
   return (
     <div className={styles.large}>
       <div className={styles.title}>
@@ -21,7 +23,9 @@ const InnerContainerLarge = ({ title }) => {
         />
       </div>
       <ul>
-        options
+        {options.map(item => (
+          <ItemOption key={item} option={item} />
+        ))}
       </ul>
     </div>
   );
@@ -29,6 +33,7 @@ const InnerContainerLarge = ({ title }) => {
 
 InnerContainerLarge.propTypes = {
   title: PropTypes.string,
+  options: PropTypes.array,
 };
 
 export default InnerContainerLarge;

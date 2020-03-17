@@ -8,7 +8,7 @@ import OptionContainer from '../OptionContainer/OptionContainer';
 
 import styles from './InnerContainer.module.scss';
 
-const InnerContainerLarge = ({ title, options }) => {
+const InnerContainerLarge = ({ title, options, deleteItem, id }) => {
   const data = settings.content.buttons;
 
   return (
@@ -20,11 +20,13 @@ const InnerContainerLarge = ({ title, options }) => {
         <Button
           variant={`${data.size.small} ${data.variant.danger}`}
           name={data.icon.minus}
+          clickAction={deleteItem}
+          id={id}
         />
       </div>
       <ul>
         {options.map(item => (
-          <OptionContainer key={item} option={item} />
+          <OptionContainer key={item} option={item} deleteItem={deleteItem} />
         ))}
       </ul>
       <Button
@@ -38,6 +40,8 @@ const InnerContainerLarge = ({ title, options }) => {
 InnerContainerLarge.propTypes = {
   title: PropTypes.string,
   options: PropTypes.array,
+  deleteItem: PropTypes.func,
+  id: PropTypes.number,
 };
 
 export default InnerContainerLarge;

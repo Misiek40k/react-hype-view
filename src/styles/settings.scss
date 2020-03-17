@@ -118,7 +118,7 @@ $br-desktop: 1200px;
 %large-line {
   @extend%medium-line;
   @include p-el("before") {
-    height: $base-unit * 30;
+    height: $base-unit * 40;
   }
 }
 

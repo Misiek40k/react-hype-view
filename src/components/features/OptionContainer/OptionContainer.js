@@ -7,13 +7,13 @@ import ItemOptiom from '../../common/ItemOption/ItemOption';
 
 import styles from './OptionContainer.module.scss';
 
-const OptionContainer = ({ option, variant }) => {
+const OptionContainer = ({ option, ...otherProps }) => {
   const data = settings.content;
 
   return (
     <div className={styles.component}>
-      <Condition name={data.condition.txt.inner} variant='small' />
-      <ItemOptiom option={option} />
+      <Condition name={data.condition.txt.inner} variant={data.condition.variant.small} />
+      <ItemOptiom option={option} {...otherProps} />
     </div>
   );
 };

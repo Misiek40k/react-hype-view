@@ -5,9 +5,10 @@ import Icon from '../Icon/Icon';
 
 import styles from './Button.module.scss';
 
-const Button = ({ variant = '', name }) => (
+const Button = ({ variant = '', name, clickAction, id }) => (
   <button
     className={styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('')}
+    onClick={() => clickAction(id)}
   >
     <Icon name={name} />
   </button>
@@ -16,6 +17,8 @@ const Button = ({ variant = '', name }) => (
 Button.propTypes = {
   variant: PropTypes.string,
   name: PropTypes.string,
+  clickAction: PropTypes.func,
+  id: PropTypes.number,
 };
 
 export default Button;

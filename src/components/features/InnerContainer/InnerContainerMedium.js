@@ -5,7 +5,7 @@ import { settings } from '../../../data/dataStore';
 import Title from '../../common/Title/Title';
 import Button from '../../common/Button/Button';
 
-const InnerContainerMedium = ({ title }) => {
+const InnerContainerMedium = ({ id, title, deleteItem }) => {
   const data = settings.content.buttons;
   return (
     <Fragment>
@@ -13,6 +13,8 @@ const InnerContainerMedium = ({ title }) => {
       <Button
         variant={`${data.size.small} ${data.variant.danger}`}
         name={data.icon.minus}
+        clickAction={deleteItem}
+        id={id}
       />
     </Fragment>
   );
@@ -20,6 +22,8 @@ const InnerContainerMedium = ({ title }) => {
 
 InnerContainerMedium.propTypes = {
   title: PropTypes.string,
+  deleteItem: PropTypes.func,
+  id: PropTypes.number,
 };
 
 export default InnerContainerMedium;

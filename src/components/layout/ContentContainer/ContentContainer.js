@@ -34,11 +34,11 @@ const ContentContainer = () => {
   );
 
   const deleteItem = (id) => {
-    const filteredState = state.filter((item) => {
+    const newState = state.filter((item) => {
       return item.id !== id;
     });
 
-    setstate(filteredState);
+    setstate(newState);
   };
 
   const deleteOption = (id, option) => {

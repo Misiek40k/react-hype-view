@@ -3,6 +3,9 @@
 .component {
   background: $color-light;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 50%;
   left: 30%;
   height: $base-unit * 10;

@@ -34,5 +34,9 @@ export const settings = {
         small: 'small',
       },
     },
+    popup: {
+      item: 'Add Item',
+      option: 'Add Option',
+    },
   },
 };

@@ -34,14 +34,15 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: $base-unit * 2.5;
+      padding-right: $base-unit;
+      border-right: $base-unit * 0.15 solid transparent;
 
       .border {
-        border: $base-unit * 0.15 solid $color-border;
-        border-radius: $base-unit * 0.4;
         width: 85%;
-        padding-left: $base-unit * 2;
+        padding: $base-unit * 0.5 $base-unit;
         z-index: 2;
         background: $color-light;
+        @extend%item-border;
       }
     }
   }

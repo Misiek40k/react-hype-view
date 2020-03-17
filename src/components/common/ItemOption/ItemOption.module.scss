@@ -1,7 +1,12 @@
 @import "../../../styles/settings.scss";
 
-.component{
+.component {
+  padding: $base-unit * 0.5 $base-unit;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 70%;
+  z-index: 1;
+  background: $color-light;
+  @extend%item-border;
 }

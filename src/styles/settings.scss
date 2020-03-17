@@ -33,6 +33,13 @@ $br-desktop: 1200px;
   font-size: $base-unit * 1.5;
 }
 
+//borders
+
+%item-border {
+  border-radius: $base-unit * 0.4;
+  border: $base-unit * 0.15 solid $color-border;
+}
+
 //shapes
 
 %shape {

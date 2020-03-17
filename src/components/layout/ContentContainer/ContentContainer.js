@@ -38,18 +38,19 @@ const ContentContainer = () => {
       return item.id !== id;
     });
 
-    setstate([...filteredState]);
+    setstate(filteredState);
   };
 
   const deleteOption = (id, option) => {
-    const newState = state;
-    const filteredOptions = state[id].options.filter((item) => {
-      return item !== option;
-    });
+    const newState = state.map(item =>
+      item.id === id
+        ?
+        { ...item, options: item.options.filter(item => item !== option) }
+        :
+        item
+    );
 
-    newState[id].options = filteredOptions;
-
-    setstate([...newState]);
+    setstate(newState);
   };
 
   return (

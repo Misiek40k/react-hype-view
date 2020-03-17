@@ -26,9 +26,9 @@
     flex-direction: column;
     width: 100%;
     padding-right: $base-unit;
+    background: $color-light;
 
     .title {
-      background: $color-light;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -40,6 +40,8 @@
         border-radius: $base-unit * 0.4;
         width: 85%;
         padding-left: $base-unit * 2;
+        z-index: 2;
+        background: $color-light;
       }
     }
   }

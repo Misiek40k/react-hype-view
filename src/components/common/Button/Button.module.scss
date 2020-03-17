@@ -24,7 +24,7 @@
     width: $base-unit * 4;
     height: $base-unit * 4;
     font-size: $base-unit * 1.5;
-    margin-left: $base-unit*3.5;
+    margin-left: $base-unit * 3.5;
 
     @include p-el("before") {
       top: -$base-unit * 4;

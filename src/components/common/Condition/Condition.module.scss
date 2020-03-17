@@ -4,24 +4,15 @@
   position: relative;
   @extend%condition-font;
 
-  &.medium{
-    @include p-el("before") {
-      top: 0;
-      left: $base-unit*4.92;
-      height: $base-unit * 21;
-      width: $base-unit * 0.15;
-      display: inline-block;
-      background: $color-border;
-      transform: translateY(-50%);
-    }
+  &.small {
+   @extend%small-line;
+  }
 
-    @include p-el("after") {
-      top: 50%;
-      left: $base-unit*4.92;
-      width: $base-unit * 21;
-      height: $base-unit * 0.15;
-      display: inline-block;
-      background: $color-border;
-    }
+  &.medium {
+   @extend%medium-line;
+  }
+
+  &.large {
+   @extend%large-line;
   }
 }

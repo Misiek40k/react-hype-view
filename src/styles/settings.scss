@@ -71,6 +71,50 @@ $br-desktop: 1200px;
   box-shadow: -$base-unit * 0.1 $base-unit * 0.75 $base-unit * 0.75 -$base-unit * 0.25 rgba(243, 79, 105, 0.2);
 }
 
+//lines
+
+%medium-line {
+  @include p-el("before") {
+    top: 0;
+    left: $base-unit * 4.92;
+    height: $base-unit * 21;
+    width: $base-unit * 0.15;
+    display: inline-block;
+    background: $color-border;
+    transform: translateY(-50%);
+  }
+
+  @include p-el("after") {
+    top: 50%;
+    left: $base-unit * 4.92;
+    width: $base-unit * 21;
+    height: $base-unit * 0.15;
+    display: inline-block;
+    background: $color-border;
+  }
+}
+
+%small-line {
+  @extend%medium-line;
+  @include p-el("before") {
+    top: 0;
+    left: $base-unit*3.43;
+    height: $base-unit * 10;
+  }
+
+  @include p-el("after") {
+    left: $base-unit * 3.5;
+      width: $base-unit * 7;
+  }
+}
+
+%large-line {
+  @extend%medium-line;
+  @include p-el("before") {
+    height: $base-unit * 30;
+  }
+}
+
 //fadeIn animation
 
 @keyframes fadeIn {

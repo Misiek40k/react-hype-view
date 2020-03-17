@@ -12,7 +12,7 @@ const OptionContainer = ({ option, variant }) => {
 
   return (
     <div className={styles.component}>
-      <Condition name={data.condition.txt.inner} variant={variant} />
+      <Condition name={data.condition.txt.inner} variant='small' />
       <ItemOptiom option={option} />
     </div>
   );

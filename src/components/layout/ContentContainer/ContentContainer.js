@@ -4,6 +4,7 @@ import { settings } from '../../../data/dataStore';
 import SectionHeader from '../../common/SectionHeader/SectionHeader';
 import Button from '../../common/Button/Button';
 import ContentItem from '../../features/ContentItem/ContentItem';
+import Popup from '../../features/Popup/Popup';
 
 import styles from './ContentContainer.module.scss';
 
@@ -12,7 +13,8 @@ const ContentContainer = () => {
   const data = settings.content;
   const buttons = settings.content.buttons;
 
-  const [state, setstate] = useState(
+  const [popup, setPopup] = useState(false);
+  const [items, setItems] = useState(
     [
       {
         id: 0,
@@ -34,15 +36,15 @@ const ContentContainer = () => {
   );
 
   const deleteItem = (id) => {
-    const newState = state.filter((item) => {
+    const newState = items.filter((item) => {
       return item.id !== id;
     });
 
-    setstate(newState);
+    setItems(newState);
   };
 
   const deleteOption = (id, option) => {
-    const newState = state.map(item =>
+    const newState = items.map(item =>
       item.id === id
         ?
         { ...item, options: item.options.filter(item => item !== option) }
@@ -50,25 +52,32 @@ const ContentContainer = () => {
         item
     );
 
-    setstate(newState);
+    setItems(newState);
+  };
+
+  const openPop = () => {
+    setPopup(true);
   };
 
   return (
     <section className={styles.component}>
       <SectionHeader name={data.title} />
       <ul>
-        {state.map(item => (
+        {items.map(item => (
           <ContentItem
             key={item.id}
             deleteItem={deleteItem}
             deleteOption={deleteOption}
+            openPop={openPop}
             {...item} />
         ))}
       </ul>
       <Button
         variant={`${buttons.size.large} ${buttons.variant.success}`}
         name={buttons.icon.plus}
+        clickAction={openPop}
       />
+      {popup ? <Popup /> : null}
     </section>
   );
 };

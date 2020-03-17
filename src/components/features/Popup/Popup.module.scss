@@ -1,0 +1,15 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  background: $color-light;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  height: $base-unit * 10;
+  width: 40%;
+  padding: 20px;
+  border-radius: $base-unit * 0.5;
+  z-index: 3;
+  @extend%primary-shadow;
+  @extend%border-gradient;
+}

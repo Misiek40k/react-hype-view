@@ -59,6 +59,8 @@ const ContentContainer = () => {
     setPopup(true);
   };
 
+  const passMethods = { openPop, deleteOption, deleteItem };
+
   return (
     <section className={styles.component}>
       <SectionHeader name={data.title} />
@@ -66,9 +68,7 @@ const ContentContainer = () => {
         {items.map(item => (
           <ContentItem
             key={item.id}
-            deleteItem={deleteItem}
-            deleteOption={deleteOption}
-            openPop={openPop}
+            {...passMethods}
             {...item} />
         ))}
       </ul>

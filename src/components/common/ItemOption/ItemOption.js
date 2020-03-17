@@ -7,7 +7,7 @@ import Title from '../Title/Title';
 
 import styles from './ItemOption.module.scss';
 
-const ItemOption = ({ option, deleteItem }) => {
+const ItemOption = ({ id, option, deleteOption }) => {
   const data = settings.content.buttons;
 
   return (
@@ -16,7 +16,9 @@ const ItemOption = ({ option, deleteItem }) => {
       <Button
         variant={`${data.size.small} ${data.variant.danger}`}
         name={data.icon.minus}
-        clickAction={deleteItem}
+        clickAction={deleteOption}
+        id={id}
+        option={option}
       />
     </div>
   );
@@ -24,7 +26,8 @@ const ItemOption = ({ option, deleteItem }) => {
 
 ItemOption.propTypes = {
   option: PropTypes.string.isRequired,
-  deleteItem: PropTypes.func,
+  deleteOption: PropTypes.func,
+  id: PropTypes.number,
 };
 
 export default ItemOption;

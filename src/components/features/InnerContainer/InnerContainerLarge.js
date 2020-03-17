@@ -8,7 +8,7 @@ import OptionContainer from '../OptionContainer/OptionContainer';
 
 import styles from './InnerContainer.module.scss';
 
-const InnerContainerLarge = ({ title, options, deleteItem, id }) => {
+const InnerContainerLarge = ({ title, options, deleteItem, id, ...otherProps }) => {
   const data = settings.content.buttons;
 
   return (
@@ -26,7 +26,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, id }) => {
       </div>
       <ul>
         {options.map(item => (
-          <OptionContainer key={item} option={item} deleteItem={deleteItem} />
+          <OptionContainer key={item} id={id} option={item} deleteItem={deleteItem} {...otherProps} />
         ))}
       </ul>
       <Button

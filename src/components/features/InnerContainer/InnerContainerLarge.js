@@ -8,7 +8,7 @@ import OptionContainer from '../OptionContainer/OptionContainer';
 
 import styles from './InnerContainer.module.scss';
 
-const InnerContainerLarge = ({ title, options, deleteItem, id, ...otherProps }) => {
+const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...otherProps }) => {
   const data = settings.content.buttons;
 
   return (
@@ -32,6 +32,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, id, ...otherProps }) 
       <Button
         variant={`${data.size.medium} ${data.variant.success}`}
         name={data.icon.plus}
+        clickAction={openPop}
       />
     </div>
   );
@@ -42,6 +43,7 @@ InnerContainerLarge.propTypes = {
   options: PropTypes.array,
   deleteItem: PropTypes.func,
   id: PropTypes.number,
+  openPop: PropTypes.func,
 };
 
 export default InnerContainerLarge;

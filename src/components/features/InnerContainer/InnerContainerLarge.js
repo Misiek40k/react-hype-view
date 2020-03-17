@@ -4,7 +4,7 @@ import { settings } from '../../../data/dataStore';
 
 import Title from '../../common/Title/Title';
 import Button from '../../common/Button/Button';
-import ItemOption from '../../common/ItemOption/ItemOption';
+import OptionContainer from '../OptionContainer/OptionContainer';
 
 import styles from './InnerContainer.module.scss';
 
@@ -24,9 +24,13 @@ const InnerContainerLarge = ({ title, options }) => {
       </div>
       <ul>
         {options.map(item => (
-          <ItemOption key={item} option={item} />
+          <OptionContainer key={item} option={item} />
         ))}
       </ul>
+      <Button
+        variant={`${data.size.medium} ${data.variant.success}`}
+        name={data.icon.plus}
+      />
     </div>
   );
 };

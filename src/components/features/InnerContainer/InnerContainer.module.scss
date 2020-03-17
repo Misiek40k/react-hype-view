@@ -28,10 +28,12 @@
     padding-right: $base-unit;
 
     .title {
+      background: $color-light;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: $base-unit * 2.5;
 
       .border {
         border: $base-unit * 0.15 solid $color-border;

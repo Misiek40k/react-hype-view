@@ -9,7 +9,7 @@
   width: 65%;
   border-radius: $base-unit * 0.5;
   background: $color-light;
-  z-index: 1;
+  z-index: 2;
   @extend%primary-shadow;
   @extend%border-gradient;
 

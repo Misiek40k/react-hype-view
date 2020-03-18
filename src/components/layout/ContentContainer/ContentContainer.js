@@ -53,7 +53,14 @@ const ContentContainer = () => {
   };
 
   const addItem = () => {
-    console.log('item');
+    const newItem = {
+      id: items[items.length - 1].id + 1,
+      variant: 'large',
+      title: 'Item',
+    };
+
+    setItems([...items, newItem]);
+    closePop();
   };
 
   const contentProps = { openPop, deleteOption, deleteItem };

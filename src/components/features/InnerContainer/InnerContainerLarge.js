@@ -24,17 +24,19 @@ const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...other
           id={id}
         />
       </div>
-      <ul>
-        {options.map(item => (
-          <OptionContainer
-            key={item}
-            id={id}
-            option={item}
-            deleteItem={deleteItem}
-            {...otherProps}
-          />
-        ))}
-      </ul>
+      {options &&
+        <ul>
+          {options.map(item => (
+            <OptionContainer
+              key={item}
+              id={id}
+              option={item}
+              deleteItem={deleteItem}
+              {...otherProps}
+            />
+          ))}
+        </ul>
+      }
       <Button
         variant=
           {`${data.size.medium} ${data.variant.success} ${data.line.true} ${data.line.inner}`}

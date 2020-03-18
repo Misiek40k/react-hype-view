@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-hype-view/static/css/main.36187d0d.chunk.css",
+    "main.js": "/react-hype-view/static/js/main.0ec9065e.chunk.js",
+    "main.js.map": "/react-hype-view/static/js/main.0ec9065e.chunk.js.map",
+    "runtime-main.js": "/react-hype-view/static/js/runtime-main.8de84385.js",
+    "runtime-main.js.map": "/react-hype-view/static/js/runtime-main.8de84385.js.map",
+    "static/js/2.9e53753b.chunk.js": "/react-hype-view/static/js/2.9e53753b.chunk.js",
+    "static/js/2.9e53753b.chunk.js.map": "/react-hype-view/static/js/2.9e53753b.chunk.js.map",
+    "index.html": "/react-hype-view/index.html",
+    "precache-manifest.64201704d11384a1de36c9ff715f5004.js": "/react-hype-view/precache-manifest.64201704d11384a1de36c9ff715f5004.js",
+    "service-worker.js": "/react-hype-view/service-worker.js",
+    "static/css/main.36187d0d.chunk.css.map": "/react-hype-view/static/css/main.36187d0d.chunk.css.map",
+    "static/js/2.9e53753b.chunk.js.LICENSE.txt": "/react-hype-view/static/js/2.9e53753b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8de84385.js",
+    "static/js/2.9e53753b.chunk.js",
+    "static/css/main.36187d0d.chunk.css",
+    "static/js/main.0ec9065e.chunk.js"
+  ]
+}

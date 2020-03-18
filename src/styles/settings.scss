@@ -94,13 +94,12 @@ $br-desktop: 1200px;
 
 %medium-line {
   @include p-el("before") {
-    top: 0;
+    bottom: 0;
     left: $base-unit * 4.92;
     height: $base-unit * 21;
     width: $base-unit * 0.15;
     display: inline-block;
     background: $color-border;
-    transform: translateY(-50%);
   }
 
   @include p-el("after") {
@@ -116,21 +115,20 @@ $br-desktop: 1200px;
 %small-line {
   @extend%medium-line;
   @include p-el("before") {
-    top: 0;
-    left: $base-unit*3.43;
-    height: $base-unit * 10;
+    left: $base-unit * 3.43;
+    height: $base-unit * 8;
   }
 
   @include p-el("after") {
     left: $base-unit * 3.5;
-      width: $base-unit * 7;
+    width: $base-unit * 7;
   }
 }
 
 %large-line {
   @extend%medium-line;
   @include p-el("before") {
-    height: $base-unit * 40;
+    height: calc(100% + #{$base-unit * 8});
   }
 }
 

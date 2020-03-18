@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Hype View
+
+### Live
+
+Open live on: [GH-Pages](https://misiek40k.github.io/react-hype-view/).
 
 ## Available Scripts
 

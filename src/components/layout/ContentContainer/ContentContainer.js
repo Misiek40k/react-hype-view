@@ -64,7 +64,6 @@ const ContentContainer = () => {
     };
 
     setItems([...items, newItem]);
-    setInputValue('');
     closePop();
   };
 

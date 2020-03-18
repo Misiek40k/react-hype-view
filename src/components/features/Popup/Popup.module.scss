@@ -15,4 +15,10 @@
   z-index: 3;
   @extend%primary-shadow;
   @extend%border-gradient;
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 }

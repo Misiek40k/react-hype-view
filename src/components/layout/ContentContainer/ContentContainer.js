@@ -14,6 +14,7 @@ const ContentContainer = () => {
   const buttons = settings.content.buttons;
 
   const [popup, setPopup] = useState(false);
+  const [editOption, setEditOption] = useState(null);
   const [items, setItems] = useState(
     [
       {
@@ -55,11 +56,26 @@ const ContentContainer = () => {
     setItems(newState);
   };
 
-  const openPop = () => {
+  const openPop = (id) => {
+    if (id) { setEditOption(id); }
     setPopup(true);
   };
 
-  const passMethods = { openPop, deleteOption, deleteItem };
+  const closePop = () => {
+    setEditOption(null);
+    setPopup(false);
+  };
+
+  const addOption = (id) => {
+    console.log(id);
+  };
+
+  const addItem = () => {
+    console.log('item');
+  };
+
+  const contentProps = { openPop, deleteOption, deleteItem };
+  const popupProps = { closePop, addItem, addOption, editOption };
 
   return (
     <section className={styles.component}>
@@ -68,7 +84,7 @@ const ContentContainer = () => {
         {items.map(item => (
           <ContentItem
             key={item.id}
-            {...passMethods}
+            {...contentProps}
             {...item}
           />
         ))}
@@ -79,7 +95,11 @@ const ContentContainer = () => {
         name={buttons.icon.plus}
         clickAction={openPop}
       />
-      {popup ? <Popup /> : null}
+      {popup ?
+        <Popup
+          {...popupProps}
+        />
+        : null}
     </section>
   );
 };

@@ -40,6 +40,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...other
           {`${data.size.medium} ${data.variant.success} ${data.line.true} ${data.line.inner}`}
         name={data.icon.plus}
         clickAction={openPop}
+        id={id}
       />
     </div>
   );

@@ -13,6 +13,7 @@
   padding: 20px;
   border-radius: $base-unit * 0.5;
   z-index: 3;
+  transform: translateY(50%);
   @extend%primary-shadow;
   @extend%border-gradient;
 

@@ -16,6 +16,7 @@ const ContentContainer = () => {
 
   const [popup, setPopup] = useState(false);
   const [editOption, setEditOption] = useState(null);
+  const [selectOption, setSelectOption] = useState(data.select.variant.large);
   const [items, setItems] = useState(initialState);
 
   const deleteItem = (id) => {
@@ -44,8 +45,8 @@ const ContentContainer = () => {
   };
 
   const closePop = () => {
-    setEditOption(null);
     setPopup(false);
+    setEditOption(null);
   };
 
   const addOption = (id) => {
@@ -55,7 +56,7 @@ const ContentContainer = () => {
   const addItem = () => {
     const newItem = {
       id: items[items.length - 1].id + 1,
-      variant: 'large',
+      variant: selectOption,
       title: 'Item',
     };
 
@@ -64,7 +65,7 @@ const ContentContainer = () => {
   };
 
   const contentProps = { openPop, deleteOption, deleteItem };
-  const popupProps = { closePop, addItem, addOption, editOption };
+  const popupProps = { closePop, addItem, addOption, editOption, selectOption, setSelectOption };
 
   return (
     <section className={styles.component}>

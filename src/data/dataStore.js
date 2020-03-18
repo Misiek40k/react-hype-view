@@ -30,7 +30,7 @@ export const settings = {
       },
     },
     condition: {
-      txt:{
+      txt: {
         outer: 'And',
         inner: 'Or',
       },
@@ -44,10 +44,21 @@ export const settings = {
       item: 'Add Item',
       option: 'Add Option',
     },
+    select: {
+      label: 'Chose item size: ',
+      txt: {
+        medium: 'Medium',
+        large: 'Large',
+      },
+      variant: {
+        medium: 'medium',
+        large: 'large',
+      },
+    },
   },
 };
 
-export const initialState =  [
+export const initialState = [
   {
     id: 0,
     variant: 'medium',

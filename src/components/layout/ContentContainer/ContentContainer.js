@@ -67,7 +67,7 @@ const ContentContainer = () => {
 
   const addItem = () => {
     const newItem = {
-      id: items[items.length - 1].id + 1,
+      id: items.length ? items[items.length - 1].id + 1 : items.id = 0,
       variant: selectOption,
       title: inputValue,
     };

@@ -2,17 +2,20 @@
 
 .component {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @extend%condition-font;
 
   &.small {
-   @extend%small-line;
+    @extend%small-line;
   }
 
   &.medium {
-   @extend%medium-line;
+    @extend%medium-line;
   }
 
   &.large {
-   @extend%large-line;
+    @extend%large-line;
   }
 }

@@ -95,11 +95,11 @@ const ContentContainer = () => {
         name={buttons.icon.plus}
         clickAction={openPop}
       />
-      {popup ?
-        <Popup
-          {...popupProps}
-        />
-        : null}
+      {popup
+        ?
+        <Popup {...popupProps} />
+        :
+        null}
     </section>
   );
 };

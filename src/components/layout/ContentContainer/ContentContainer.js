@@ -102,7 +102,7 @@ const ContentContainer = () => {
       </ul>
       <Button
         variant=
-        {`${buttons.size.large} ${buttons.variant.success} ${buttons.line.true} ${buttons.line.outer}`}
+          {`${buttons.size.large} ${buttons.variant.success} ${buttons.line.true} ${buttons.line.outer}`}
         name={buttons.icon.plus}
         clickAction={openPop}
       />

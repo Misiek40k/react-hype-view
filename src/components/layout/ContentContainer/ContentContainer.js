@@ -67,7 +67,7 @@ const ContentContainer = () => {
 
   const addItem = () => {
     const newItem = {
-      id: items.length ? items[items.length - 1].id + 1 : items.id = 0,
+      id: items.length ? items[items.length - 1].id + 1 : 0,
       variant: selectOption,
       title: inputValue,
     };
@@ -102,7 +102,7 @@ const ContentContainer = () => {
       </ul>
       <Button
         variant=
-          {`${buttons.size.large} ${buttons.variant.success} ${buttons.line.true} ${buttons.line.outer}`}
+        {`${buttons.size.large} ${buttons.variant.success} ${buttons.line.true} ${buttons.line.outer}`}
         name={buttons.icon.plus}
         clickAction={openPop}
       />

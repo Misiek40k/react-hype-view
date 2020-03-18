@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { settings } from '../../../data/dataStore';
+import { initialState } from '../../../data/dataStore';
 
 import SectionHeader from '../../common/SectionHeader/SectionHeader';
 import Button from '../../common/Button/Button';
@@ -15,26 +16,7 @@ const ContentContainer = () => {
 
   const [popup, setPopup] = useState(false);
   const [editOption, setEditOption] = useState(null);
-  const [items, setItems] = useState(
-    [
-      {
-        id: 0,
-        variant: 'medium',
-        title: 'Age 40+',
-      },
-      {
-        id: 1,
-        variant: 'large',
-        title: 'Ethnicity',
-        options: ['Black', 'Hispanic'],
-      },
-      {
-        id: 2,
-        variant: 'medium',
-        title: 'Income yearly 45k USD+',
-      },
-    ],
-  );
+  const [items, setItems] = useState(initialState);
 
   const deleteItem = (id) => {
     const newState = items.filter((item) => {

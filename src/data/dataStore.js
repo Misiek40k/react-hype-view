@@ -46,3 +46,22 @@ export const settings = {
     },
   },
 };
+
+export const initialState =  [
+  {
+    id: 0,
+    variant: 'medium',
+    title: 'Age 40+',
+  },
+  {
+    id: 1,
+    variant: 'large',
+    title: 'Ethnicity',
+    options: ['Black', 'Hispanic'],
+  },
+  {
+    id: 2,
+    variant: 'medium',
+    title: 'Income yearly 45k USD+',
+  },
+];

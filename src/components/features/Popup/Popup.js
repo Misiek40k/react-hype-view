@@ -7,7 +7,7 @@ import Button from '../../common/Button/Button';
 
 import styles from './Popup.module.scss';
 
-const Popup = ({ editOption, closePop, addItem }) => {
+const Popup = ({ editOption, closePop, addItem, addOption }) => {
   const data = settings.content;
   const buttons = settings.content.buttons;
   return (
@@ -19,7 +19,7 @@ const Popup = ({ editOption, closePop, addItem }) => {
         <Button
           variant={`${buttons.size.medium} ${buttons.variant.success}`}
           name={buttons.icon.plus}
-          clickAction={addItem}
+          clickAction={editOption ? addOption : addItem}
           id={editOption}
         />
         <Button
@@ -36,6 +36,7 @@ Popup.propTypes = {
   editOption: PropTypes.number,
   closePop: PropTypes.func,
   addItem: PropTypes.func,
+  addOption: PropTypes.func,
 };
 
 export default Popup;

@@ -5,6 +5,7 @@
   border-radius: 50%;
   color: $color-light;
   position: relative;
+  z-index: 1;
 
   &.large {
     width: $base-unit * 7;
@@ -41,16 +42,26 @@
       top: -$base-unit * 11;
       height: $base-unit * 10;
       width: $base-unit * 0.15;
+      z-index: 0;
+    }
+
+    @include max-media($br-tablet) {
+      margin-left: $base-unit*1.5;
     }
   }
 
   &.innerLine {
     margin-left: $base-unit * 3.5;
 
+    @include max-media($br-tablet) {
+      margin-left: $base-unit*1.5;
+    }
+
     @include p-el("before") {
       top: -$base-unit * 4;
       height: $base-unit * 4;
       width: $base-unit * 0.15;
+      z-index: 0;
     }
   }
 

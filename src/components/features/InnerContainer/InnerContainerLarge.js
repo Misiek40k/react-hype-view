@@ -25,7 +25,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...other
         />
       </div>
       {options &&
-        <ul>
+        <ul className={styles.list}>
           {options.map(item => (
             <OptionContainer
               key={item}

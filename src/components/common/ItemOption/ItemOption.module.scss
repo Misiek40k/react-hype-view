@@ -5,8 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 70%;
   z-index: 1;
   background: $color-light;
   @extend%item-border;
+
+  @include max-media($br-tablet) {
+    width: 100%;
+  }
 }

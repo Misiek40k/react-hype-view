@@ -23,8 +23,9 @@ $fw-regular: 400;
 $fw-bold: 700;
 
 $br-mobile: 360px;
-$br-tablet: 768px;
-$br-desktop: 1200px;
+$br-tablet: 780px;
+$br-desktop: 992px;
+$br-xl-desktop: 1366px;
 
 //fonts
 
@@ -100,15 +101,21 @@ $br-desktop: 1200px;
     width: $base-unit * 0.15;
     display: inline-block;
     background: $color-border;
+
+    @include max-media($br-tablet){
+      height: calc(100% + #{$base-unit * 8});
+    }
   }
 
   @include p-el("after") {
-    top: 50%;
-    left: $base-unit * 4.92;
-    width: $base-unit * 21;
-    height: $base-unit * 0.15;
-    display: inline-block;
-    background: $color-border;
+    @include min-media($br-tablet) {
+      top: 50%;
+      left: $base-unit * 4.92;
+      width: $base-unit * 21;
+      height: $base-unit * 0.15;
+      display: inline-block;
+      background: $color-border;
+    }
   }
 }
 

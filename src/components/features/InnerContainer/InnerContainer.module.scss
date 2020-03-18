@@ -9,8 +9,27 @@
   width: 65%;
   border-radius: $base-unit * 0.5;
   background: $color-light;
+  z-index: 1;
   @extend%primary-shadow;
   @extend%border-gradient;
+
+  @include max-media($br-xl-desktop) {
+    padding: $base-unit * 2 $base-unit $base-unit * 2 $base-unit * 1.5;
+  }
+
+  @include max-media($br-desktop) {
+    width: 75%;
+  }
+
+  @include max-media($br-tablet) {
+    width: 100%;
+  }
+
+  .list{
+    @include max-media($br-tablet) {
+      padding-left: 0;
+    }
+  }
 
   .large {
     display: flex;
@@ -19,14 +38,24 @@
     padding-right: $base-unit;
     background: $color-light;
 
+    @include max-media($br-tablet) {
+      padding-right: 0;
+    }
+
     .title {
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       margin-bottom: $base-unit * 2.5;
       padding-right: $base-unit;
       border-right: $base-unit * 0.15 solid transparent;
+
+      @include max-media($br-mobile) {
+        padding-right: 0;
+        justify-content: flex-end;
+      }
 
       .border {
         width: 85%;
@@ -34,6 +63,14 @@
         z-index: 2;
         background: $color-light;
         @extend%item-border;
+
+        @include max-media($br-tablet) {
+          width: 75%;
+        }
+
+        @include max-media($br-mobile) {
+          width: 100%;
+        }
       }
     }
   }

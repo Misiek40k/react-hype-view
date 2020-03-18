@@ -16,6 +16,11 @@
   @extend%primary-shadow;
   @extend%border-gradient;
 
+  @include max-media($br-tablet){
+    left: 5%;
+    width: 90%;
+  }
+
   .input {
     padding: $base-unit * 0.5;
     margin: $base-unit 0;

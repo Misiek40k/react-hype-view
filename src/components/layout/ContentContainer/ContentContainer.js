@@ -91,7 +91,7 @@ const ContentContainer = () => {
   return (
     <section className={styles.component}>
       <SectionHeader name={data.title} />
-      <ul>
+      <ul className={styles.list}>
         {items.map(item => (
           <ContentItem
             key={item.id}

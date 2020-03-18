@@ -14,4 +14,9 @@
   z-index: 2;
   @extend%primary-gradient;
   @extend%primary-shadow;
+
+  @include max-media($br-tablet) {
+    width: 100%;
+    padding: $base-unit * 2.5 0;
+  }
 }

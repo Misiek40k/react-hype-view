@@ -32,11 +32,10 @@ const ContentContainer = () => {
     const newState = items.map(item =>
       item.id === id
         ?
-        { ...item, options: item.options.filter(item => item !== option) }
+        { ...item, options: item.options.filter(item => item.id !== option.id) }
         :
         item
     );
-
     setItems(newState);
   };
 
@@ -55,9 +54,14 @@ const ContentContainer = () => {
     const newState = items.map(item =>
       item.id === id ?
         item.options ?
-          { ...item, options: [...item.options, inputValue] }
+          {
+            ...item, options: [...item.options, {
+              id: item.options[item.options.length - 1].id + 1,
+              name: inputValue,
+            }],
+          }
           :
-          { ...item, options: [inputValue] }
+          { ...item, options: [{ id: 0, name: inputValue }] }
         : item
     );
 

@@ -68,7 +68,16 @@ export const initialState = [
     id: 1,
     variant: 'large',
     title: 'Ethnicity',
-    options: ['Black', 'Hispanic'],
+    options: [
+      {
+        id: 0,
+        name: 'Black',
+      },
+      {
+        id: 1,
+        name: 'Hispanic',
+      },
+    ],
   },
   {
     id: 2,

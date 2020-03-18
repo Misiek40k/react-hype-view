@@ -19,7 +19,7 @@ Button.propTypes = {
   name: PropTypes.string,
   clickAction: PropTypes.func,
   id: PropTypes.number,
-  option: PropTypes.string,
+  option: PropTypes.any,
 };
 
 export default Button;

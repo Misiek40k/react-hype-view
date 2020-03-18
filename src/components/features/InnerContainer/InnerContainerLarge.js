@@ -28,7 +28,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...other
         <ul className={styles.list}>
           {options.map(item => (
             <OptionContainer
-              key={item}
+              key={item.id}
               id={id}
               option={item}
               deleteItem={deleteItem}

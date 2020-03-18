@@ -12,7 +12,7 @@ const ItemOption = ({ id, option, deleteOption }) => {
 
   return (
     <div className={styles.component}>
-      <Title subtitle={option} />
+      <Title subtitle={option.name} />
       <Button
         variant={`${data.size.small} ${data.variant.danger}`}
         name={data.icon.minus}
@@ -25,7 +25,7 @@ const ItemOption = ({ id, option, deleteOption }) => {
 };
 
 ItemOption.propTypes = {
-  option: PropTypes.string.isRequired,
+  option: PropTypes.object.isRequired,
   deleteOption: PropTypes.func,
   id: PropTypes.number,
 };

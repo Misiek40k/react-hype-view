@@ -19,7 +19,7 @@ const OptionContainer = ({ option, ...otherProps }) => {
 };
 
 OptionContainer.propTypes = {
-  option: PropTypes.string,
+  option: PropTypes.object,
   variant: PropTypes.string,
 };
 

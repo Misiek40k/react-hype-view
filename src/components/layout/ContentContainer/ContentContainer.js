@@ -52,7 +52,16 @@ const ContentContainer = () => {
   };
 
   const addOption = (id) => {
-    console.log(id);
+    const newState = items.map(item =>
+      item.id === id ?
+        item.options ?
+          { ...item, options: [...item.options, inputValue] }
+          :
+          { ...item, options: [inputValue] }
+        : item
+    );
+
+    setItems(newState);
     closePop();
   };
 

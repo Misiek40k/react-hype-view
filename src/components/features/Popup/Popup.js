@@ -22,7 +22,7 @@ const Popup = ({ id }) => {
         />
         <Button
           variant={`${buttons.size.medium} ${buttons.variant.danger}`}
-          name={buttons.icon.minus}
+          name={buttons.icon.cancel}
         />
       </div>
     </div>

@@ -14,6 +14,11 @@ export const settings = {
         medium: 'medium',
         small: 'small',
       },
+      line: {
+        true: 'line',
+        outer: 'outerLine',
+        inner: 'innerLine',
+      },
       variant: {
         success: 'success',
         danger: 'danger',
@@ -21,6 +26,7 @@ export const settings = {
       icon: {
         plus: 'plus',
         minus: 'minus',
+        cancel: 'ban',
       },
     },
     condition: {

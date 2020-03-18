@@ -69,11 +69,13 @@ const ContentContainer = () => {
           <ContentItem
             key={item.id}
             {...passMethods}
-            {...item} />
+            {...item}
+          />
         ))}
       </ul>
       <Button
-        variant={`${buttons.size.large} ${buttons.variant.success}`}
+        variant=
+          {`${buttons.size.large} ${buttons.variant.success} ${buttons.line.true} ${buttons.line.outer}`}
         name={buttons.icon.plus}
         clickAction={openPop}
       />

@@ -15,6 +15,7 @@ const ContentContainer = () => {
   const buttons = settings.content.buttons;
 
   const [popup, setPopup] = useState(false);
+  const [inputValue, setInputValue] = useState('');
   const [editOption, setEditOption] = useState(null);
   const [selectOption, setSelectOption] = useState(data.select.variant.large);
   const [items, setItems] = useState(initialState);
@@ -46,6 +47,7 @@ const ContentContainer = () => {
 
   const closePop = () => {
     setPopup(false);
+    setInputValue('');
     setEditOption(null);
   };
 
@@ -61,11 +63,21 @@ const ContentContainer = () => {
     };
 
     setItems([...items, newItem]);
+    setInputValue('');
     closePop();
   };
 
   const contentProps = { openPop, deleteOption, deleteItem };
-  const popupProps = { closePop, addItem, addOption, editOption, selectOption, setSelectOption };
+  const popupProps = {
+    closePop,
+    addItem,
+    addOption,
+    editOption,
+    selectOption,
+    setSelectOption,
+    inputValue,
+    setInputValue,
+  };
 
   return (
     <section className={styles.component}>

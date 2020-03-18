@@ -9,7 +9,7 @@ import Select from '../../common/Select/Select';
 import styles from './Popup.module.scss';
 
 
-const Popup = ({ editOption, closePop, addItem, addOption, selectOption, setSelectOption }) => {
+const Popup = ({ editOption, closePop, addItem, addOption, selectOption, setSelectOption, inputValue, setInputValue }) => {
   const data = settings.content;
   const buttons = settings.content.buttons;
 
@@ -17,6 +17,12 @@ const Popup = ({ editOption, closePop, addItem, addOption, selectOption, setSele
     <div className={styles.component}>
       <Title
         subtitle={!editOption ? data.popup.item : data.popup.option}
+      />
+      <input
+        type='text'
+        value={inputValue}
+        onChange={event => setInputValue(event.target.value)}
+        className={styles.input}
       />
       {
         !editOption &&
@@ -49,6 +55,8 @@ Popup.propTypes = {
   addOption: PropTypes.func,
   selectOption: PropTypes.string,
   setSelectOption: PropTypes.func,
+  inputValue: PropTypes.string,
+  setInputValue: PropTypes.func,
 };
 
 export default Popup;

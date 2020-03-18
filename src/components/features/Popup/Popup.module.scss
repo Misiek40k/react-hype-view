@@ -16,6 +16,12 @@
   @extend%primary-shadow;
   @extend%border-gradient;
 
+  .input {
+    padding: $base-unit * 0.5;
+    margin: $base-unit 0;
+    @extend%item-border;
+  }
+
   .buttons {
     width: 100%;
     display: flex;

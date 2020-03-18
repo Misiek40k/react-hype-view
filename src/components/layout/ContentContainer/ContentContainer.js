@@ -17,7 +17,7 @@ const ContentContainer = () => {
   const [popup, setPopup] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [editOption, setEditOption] = useState(null);
-  const [selectOption, setSelectOption] = useState(data.select.variant.large);
+  const [selectOption, setSelectOption] = useState(data.select.variant.medium);
   const [items, setItems] = useState(initialState);
 
   const deleteItem = (id) => {
@@ -53,13 +53,14 @@ const ContentContainer = () => {
 
   const addOption = (id) => {
     console.log(id);
+    closePop();
   };
 
   const addItem = () => {
     const newItem = {
       id: items[items.length - 1].id + 1,
       variant: selectOption,
-      title: 'Item',
+      title: inputValue,
     };
 
     setItems([...items, newItem]);

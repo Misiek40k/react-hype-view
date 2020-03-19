@@ -60,27 +60,27 @@ export const settings = {
 
 export const initialState = [
   {
-    id: 0,
+    id: 1,
     variant: 'medium',
     title: 'Age 40+',
   },
   {
-    id: 1,
+    id: 2,
     variant: 'large',
     title: 'Ethnicity',
     options: [
       {
-        id: 0,
+        id: 1,
         name: 'Black',
       },
       {
-        id: 1,
+        id: 2,
         name: 'Hispanic',
       },
     ],
   },
   {
-    id: 2,
+    id: 3,
     variant: 'medium',
     title: 'Income yearly 45k USD+',
   },

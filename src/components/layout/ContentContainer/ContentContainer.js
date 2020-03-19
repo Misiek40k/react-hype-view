@@ -56,12 +56,12 @@ const ContentContainer = () => {
         item.options ?
           {
             ...item, options: [...item.options, {
-              id: item.options[item.options.length - 1].id + 1,
+              id: item.options.length + 1,
               name: inputValue,
             }],
           }
           :
-          { ...item, options: [{ id: 0, name: inputValue }] }
+          { ...item, options: [{ id: 1, name: inputValue }] }
         : item
     );
 
@@ -71,7 +71,7 @@ const ContentContainer = () => {
 
   const addItem = () => {
     const newItem = {
-      id: items.length ? items[items.length - 1].id + 1 : 0,
+      id: items.length ? items.length + 1 : 1,
       variant: selectOption,
       title: inputValue,
     };

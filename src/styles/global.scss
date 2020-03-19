@@ -28,7 +28,7 @@ body {
 
   @include p-el("before") {
     @extend%shape;
-    top: $base-unit * 13;
+    top: $base-unit * 16;
     left: -22vw;
     background: $color-secondary;
     border-radius: 70% 40% 50% 50% / 60% 60% 50% 50%;

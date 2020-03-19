@@ -25,7 +25,7 @@
 
   @include p-el("after") {
     right: -$base-unit * 3;
-    top: $base-unit * 8;
+    top: $base-unit * 10;
     width: $base-unit * 7;
     height: $base-unit * 7;
     background: linear-gradient($color-light, $color-light) padding-box,

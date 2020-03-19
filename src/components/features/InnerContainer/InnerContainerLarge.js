@@ -4,7 +4,7 @@ import { settings } from '../../../data/dataStore';
 
 import Title from '../../common/Title/Title';
 import Button from '../../common/Button/Button';
-import OptionContainer from '../OptionContainer/OptionContainer';
+import ContentItem from '../ContentItem/ContentItem';
 
 import styles from './InnerContainer.module.scss';
 
@@ -27,7 +27,7 @@ const InnerContainerLarge = ({ title, options, deleteItem, openPop, id, ...other
       {options &&
         <ul className={styles.list}>
           {options.map(item => (
-            <OptionContainer
+            <ContentItem
               key={item.id}
               id={id}
               option={item}

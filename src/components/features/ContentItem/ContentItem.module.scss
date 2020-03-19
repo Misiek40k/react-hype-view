@@ -1,6 +1,6 @@
 @import "../../../styles/settings.scss";
 
-.component {
+.item {
   width: 100%;
   margin-bottom: $base-unit * 3.75;
   padding-left: $base-unit * 3;
@@ -13,5 +13,17 @@
     flex-direction: column;
     margin-bottom: $base-unit * 2;
     padding-left: 0;
+  }
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $base-unit;
+
+  @include max-media($br-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
